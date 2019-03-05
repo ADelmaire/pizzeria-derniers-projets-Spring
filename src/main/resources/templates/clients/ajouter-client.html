@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>ajout client</title>
+<link rel="stylesheet" th:href="@{css/client/ajouter-client.css}"/>
+</head>
+<body>
+<h1 th:text="${c.nom}"></h1>
+<div id="conteneur">
+
+	<form th:action="@{ajouter-client}" method="post" th:object="${c}">
+	
+	<fieldset>
+			<legend>Ajouter une fiche client</legend>
+			
+			<label for="nom">Nom:</label> <input class="cadre" type="text" id="nom" name="nom" th:value="${c.nom}" th:field="*{nom}"/>
+			<label for="prenom">Prenom:</label> <input class="cadre" type="text" id="prenom" name="prenom" th:value="${c.prenom}"  th:field="*{prenom}"/>
+			<label for="dateDeNaissance">Date de naissance:</label> 
+			<input class="cadre" type="date" id="dateDeNaissance" name="dateDeNaissance" th:value="${c.dateDeNaissance}" th:field="*{dateDeNaissance}"/>
+			<label for="ville">Ville:</label> <input class="cadre" type="text" id="ville" name="ville" th:value="${c.ville}"  th:field="*{ville}"/>
+			<label for="adresse">Adresse:</label> <input class="cadre" type="text" id="adresse" name="adresse" th:value="${c.adresse}"  th:field="*{adresse}"/>
+			<label for="codePostal">Code postal:</label> <input class="cadre" type="text" id="codePostal" name="codePostal" th:value="${c.codePostal}" th:field="*{codePostal}"/>
+			<label for="email">Email:</label> <input class="cadre" type="text" id="email" name="email" th:value="${c.email}"  th:field="*{email}"/>
+			<label for="phone">Téléphone:</label> <input class="cadre" type="text" id="phone" name="phone" th:value="${c.phone}" th:field="*{phone}"/>
+			<label for="numero">Numéro:</label> <input class="cadre" type="text" id="numero" name="numero" th:value="${c.numero}" th:field="*{numero}"/>
+			
+			<input class="sub" type="submit" value="Envoyer" /> 
+			<input class="sub" type="reset" value="Annuler" />
+
+		</fieldset>
+	
+	</form>
+
+</div>
+</body>
+</html>

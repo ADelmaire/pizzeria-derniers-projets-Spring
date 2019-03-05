@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Les pizzas</title>
+<link rel="stylesheet" th:href="@{css/pizza/pizza.css}"/>
+</head>
+<body>
+
+<h1>Nos Pizzas</h1>
+
+<div id="conteneur">
+<div th:each="pizza : ${pizzas}"  class="blocIndiv">
+<label th:text="${pizza.prix}"></label>
+<img th:src="${pizza.photo}"/>
+<ul>
+<li th:text="${pizza.libelle}"></li>
+<li ><a th:href="@{pizza-info(id=${pizza.id})}">Infos</a></li>
+</ul>
+</div>
+</div>
+<a th:href="@{ajouter}">Ajouter une pizza</a>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{css/client/client-infos.css}"/>
+</head>
+<body>
+<div id="bloc">
+		<h1 th:text="${client.nom}"></h1>
+
+		<ul id="blocIndiv">
+			<li th:text="${client.numero}"></li>
+			<li th:text="${client.dateDeNaissance}"></li>
+			<li th:text="${client.adresse}"></li>
+			<li th:text="${client.ville}"></li>
+			<li th:text="${client.email}"></li>
+			<li th:text="${client.phone}"></li>
+		</ul>
+		<div id="boutons">
+			<a th:href="@{modifierCl(id=${client.id})}">modifier</a><br /> 
+			<a th:href="@{supprimerCl(id=${client.id})}">supprimer</a>
+		</div>
+
+	</div>
+</body>
+</html>

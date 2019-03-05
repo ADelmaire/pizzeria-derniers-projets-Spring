@@ -1,0 +1,28 @@
+@charset "UTF-8";
+h1{
+	text-align: center;
+	color: #0d4d35;
+}
+#bloc{
+	width: 800px;
+	height: 700px;
+	margin:auto;
+	border: 2px solid #18c921;
+	border-radius: 4%;
+}
+
+#bloc_infos{
+	margin-top: 20px;
+	background-color: #d9f4df;
+	border-radius: 20px;
+}
+
+img{
+	height: 400px;
+	margin: 30px;
+}
+#boutons{
+	margin-left: 20px;
+}
+
+

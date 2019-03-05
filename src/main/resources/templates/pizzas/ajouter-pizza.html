@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>ajout pizza</title>
+<link rel="stylesheet" th:href="@{css/pizza/ajouter-pizza.css}"/>
+</head>
+<body>
+<div id="conteneur">
+
+	<form th:action="@{ajouter-pizza}" method="post" th:object="${newPizza}">
+	
+	<fieldset>
+			<legend>Ajouter une pizza</legend>
+			
+			<label for="libelle">Nom:</label> <input class="cadre" type="text" id="libelle" name="libelle"  th:field="*{libelle}"/>
+			<label for="reference">Reference:</label> <input class="cadre" type="text" id="reference" name="reference"  th:field="*{reference}"/>
+			<label for="prix">Prix:</label> <input class="cadre" type="text" id="prix" name="prix"  th:field="*{prix}"/>
+			<label for="photo">Photo:</label> <input class="cadre" type="text" id="photo" name="photo"  th:field="*{photo}"/>
+			<label for="description">Description:</label> <input class="cadre" type="text" id="description" name="description"  th:field="*{description}"/>
+			<label for="numero">Numéro:</label> <input class="cadre" type="text" id="numero" name="numero"  th:field="*{numero}"/>
+			
+			<input class="sub" type="submit" value="Envoyer" /> 
+			<input class="sub" type="reset" value="Annuler" />
+
+		</fieldset>
+	
+	</form>
+
+</div>
+</body>
+</html>

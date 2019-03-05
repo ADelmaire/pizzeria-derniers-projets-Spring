@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Infos pizza</title>
+<link rel="stylesheet" th:href="@{css/pizza/pizza-infos.css}" />
+</head>
+<body>
+	<div id="bloc">
+		<h1 th:text="${pizza.libelle}"></h1>
+		<img alt="image de la pizza" th:src="${pizza.photo}" />
+
+		<ul id="bloc_infos">
+			<li th:text="${pizza.description}"></li>
+			<li th:text="${pizza.reference}"></li>
+			<li th:text="${pizza.numero}"></li>
+			<li th:text="${pizza.prix}"></li>
+		</ul>
+		<div id="boutons">
+			<a th:href="@{modifier(id=${pizza.id})}">modifier</a><br /> 
+			<a th:href="@{supprimer(id=${pizza.id})}">supprimer</a></br>
+		</div>
+
+	</div>
+</body>
+</html>

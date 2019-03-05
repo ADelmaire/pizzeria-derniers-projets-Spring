@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>clients</title>
+<link rel="stylesheet" th:href="@{css/client/clients.css}" />
+</head>
+<body>
+	<h1>Liste des clients</h1>
+
+	<div id="conteneur">
+		<table>
+			<tr th:each="client : ${clients}" class="blocIndiv">
+				<td th:text="${client.numero}"></td>
+				<td th:text="${client.nom}"></td>
+				<td th:text="${client.prenom}"></td>
+				<td th:text="${client.dateDeNaissance}"></td>
+				<td><a th:href="@{client-infos(id=${client.id})}">Infos</a></td>
+			</tr>
+		</table>
+	</div>
+	<a th:href="@{ajouterClient}">Ajouter un client</a>
+
+</body>
+</html>

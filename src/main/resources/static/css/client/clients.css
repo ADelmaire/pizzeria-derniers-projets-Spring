@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+h1 {	
+	margin-bottom: 30px;
+	text-align: center;
+	font-family: sans-serif;
+	background-color: #f3f8f1;
+	color: #4f0000;
+}
+#conteneur {
+	background-color: #e6f2f0;
+	width: 900px;
+	margin: auto;
+}
+.blocIndiv {
+	border: 3px solid #e7e2e3;
+	width: 370px;
+	display: inline-block;
+	background-color: #f3f8f1;
+	margin: 20px;
+
+}
+tr{
+	border: 2px solid #e7e2e3;
+	font size: 15px;
+	color: #800040;
+	font-family: sans-serif;
+	padding: 15px;
+}

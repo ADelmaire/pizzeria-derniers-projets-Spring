@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Modification</title>
+<link rel="stylesheet" th:href="@{css/pizza/modifier-pizza.css}"/>
+</head>
+<body>
+<h1 th:text="${p.libelle}"></h1>
+<div id="conteneur">
+
+	<form th:action="@{ajouter-pizza}" method="post" th:object="${p}">
+	
+	<fieldset>
+			<legend>Modifier une pizza</legend>
+			
+			<input class="cadre" hidden="hidden" type="text" id="id" name="id"  th:value="${p.id}" th:field="*{id}"/>
+			<label for="libelle">Nom:</label> <input class="cadre" type="text" id="libelle" name="libelle" th:value="${p.libelle}" th:field="*{libelle}"/>
+			<label for="reference">Reference:</label> <input class="cadre" type="text" id="reference" name="reference" th:value="${p.reference}"  th:field="*{reference}"/>
+			<label for="prix">Prix:</label> <input class="cadre" type="text" id="prix" name="prix" th:value="${p.prix}"  th:field="*{prix}"/>
+			<label for="photo">Photo:</label> <input class="cadre" type="text" id="photo" name="photo" th:value="${p.photo}"  th:field="*{photo}"/>
+			<label for="description">Description:</label> <input class="cadre" type="text" id="description" name="description" th:value="${p.description}"  th:field="*{description}"/>
+			<label for="numero">Numéro:</label> <input class="cadre" type="text" id="numero" name="numero" th:value="${p.numero}" th:field="*{numero}"/>
+			
+			<input class="sub" type="submit" value="Envoyer" /> 
+			<input class="sub" type="reset" value="Annuler" />
+
+		</fieldset>
+	
+	</form>
+
+</div>
+</body>
+</html>

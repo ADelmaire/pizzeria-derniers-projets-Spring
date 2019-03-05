@@ -1,0 +1,25 @@
+@charset "UTF-8";
+#conteneur{
+	width: 300px;
+	margin:auto;
+}
+
+.cadre{
+	width: 250px;
+	margin-bottom: 15px;
+	background-color: #eff8de;
+}
+
+label{
+	display:block;
+}
+
+fieldset{
+	boder:4px solid #fccb0a;
+	font-size: 15px;
+}
+
+.sub{
+	width: 100px;
+	margin:auto;
+}
